@@ -1,0 +1,32 @@
+{
+  "url": {
+    "type": "string",
+    "required": true
+  },
+
+  "status": {
+    "type": "string",
+    "enum": [
+      "new",
+      "working",
+      "done",
+      "error",
+      "cancelled"
+    ],
+    "default": "new"
+  },
+
+  "created_unixtime": {
+    "type": "number"
+  },
+
+  "updated_unixtime": {
+    "type": "number"
+  },
+  "content": {
+    "type": "string"
+  },
+  "error": {
+    "type": "string"
+  }
+}

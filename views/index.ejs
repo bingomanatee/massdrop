@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1><%= title %></h1>
+            <p>Welcome to <%= title %></p>
+            <p>Please enter a job in the form below or <a href="/queue">Click Here</a> to view your jobs in progress.</p>
+            <form class="form-inline" method="post" action="/api">
+                <input type="hidden" name="redirect-to-view" value="1"/>
+                <div class="form-group"><label>URL</label> <input type="text" class="form-control"
+                                                                  placeholder="http://www.website.com"
+                                                                  style="width: 40rem" name="url"/></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit URL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn" target="_blank" href="/api/reset">Click Here</a> to clear all jobs.
+        </div>
+        <div class="col-md-6">
+            <a class="btn" target="_blank" href="/api/seed">Click Here</a> to add a few jobs to the queue.
+        </div>
+    </div>
+</div>
+</body>
+</html>

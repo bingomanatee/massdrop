@@ -1,0 +1,8 @@
+systemLog:
+  destination: file
+  path: './mongo.log'
+storage:
+  dbPath: './data'
+  directoryPerDB: 'true'
+net:
+  port: 28017

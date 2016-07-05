@@ -1,0 +1,6 @@
+.DS_STORE
+.idea
+*.log
+*.log.*
+node_modules
+mongo/data
